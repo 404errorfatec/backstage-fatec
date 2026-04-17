@@ -18,10 +18,10 @@
     "githubUrl": "#"
   },
   {
-  "titulo": "MOD",
-  "descricao": "Modificação GRUPO 05",
-  "autores": ["Juliana Duarte", "Larissa Peres", "Danton Vitor"],
-  "tecnologias": ["C#", "Blazor", "PostgreSQL"],
-  "link": "https://github.com/seu-usuario/seu-repo"
+  "title": "TESTE",
+  "description": "Modificação GRUPO 05",
+  "professor": ["Juliana Duarte", " Larissa Peres", " Danton Vitor"],
+  "tags": ["C#", "Blazor", "PostgreSQL"],
+  "image": "https://cdn-wcsm.alura.com.br/2025/04/tipos-de-testes-principais-por-que-utiliza-los.jpg"
 }
 ]
