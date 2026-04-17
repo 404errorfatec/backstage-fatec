@@ -16,5 +16,12 @@
     "tags": ["IoT", "Node.js"],
     "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=400",
     "githubUrl": "#"
-  }
+  },
+  {
+  "titulo": "MOD",
+  "descricao": "Modificação GRUPO 05",
+  "autores": ["Juliana Duarte", "Larissa Peres", "Danton Vitor"],
+  "tecnologias": ["C#", "Blazor", "PostgreSQL"],
+  "link": "https://github.com/seu-usuario/seu-repo"
+}
 ]
