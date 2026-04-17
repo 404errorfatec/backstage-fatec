@@ -16,5 +16,16 @@
     "tags": ["IoT", "Node.js"],
     "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=400",
     "githubUrl": "#"
+  },
+  {
+    "id": "3",
+    "title": "G2: UI/UX",
+    "professor": "Anderson",
+    "lider": "Ryan",
+    "autores": "Ryan Cristian, Henrique Silva, Guilherme Alexandre",
+    "description": "Estilização (Tailwind/CSS), Responsividade e Temas.",
+    "tags": ["UI/UX", "TailwindCSS", "CSS"],
+    "image": "/src/assets/error404.png",
+    "githubUrl": "#"
   }
 ]
