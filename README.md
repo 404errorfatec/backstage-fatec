@@ -14,3 +14,11 @@ O Compilador React não está habilitado neste template devido ao seu impacto no
 ## Expandindo a configuração do ESLint
 
 Se você está desenvolvendo uma aplicação em produção, recomendamos o uso de TypeScript com regras de lint cientes de tipo habilitadas. Confira o [template TS](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) para obter informações sobre como integrar TypeScript e [`typescript-eslint`](https://typescript-eslint.io) no seu projeto.
+
+## Grupos:
+### Grupo 06 - Detalhes
+- Leonardo
+- Neilon
+- João Ishida
+- Atilano
+- Diego
