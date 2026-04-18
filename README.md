@@ -17,7 +17,7 @@ Se você está desenvolvendo uma aplicação em produção, recomendamos o uso d
 
 ## Grupos:
 ### Grupo 06 - Detalhes
-- Leonardo
+- Leonardo Souza
 - Neilon
 - João Ishida
 - Atilano
