@@ -24,4 +24,13 @@
   "tags": ["C#", "Blazor", "PostgreSQL"],
   "image": "https://cdn-wcsm.alura.com.br/2025/04/tipos-de-testes-principais-por-que-utiliza-los.jpg"
 }
+    "id": "3",
+    "title": "Padronização do JSON global e tipagem",
+    "professor": "Anderson Ignacio",
+    "description": "Padronização do JSON global e tipagem (TypeScript).",
+    "tags": ["TypeScript", "JSON", "Padronização"],
+    "autores": ["João Paulo Mateus", "Marcio", "Otavio", "Pedro", "Victor", "Felipe"],
+    "image": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80&w=400",
+    "githubUrl": "#"
+  }
 ]
