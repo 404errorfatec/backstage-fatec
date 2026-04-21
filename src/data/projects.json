@@ -19,7 +19,7 @@
   },
   {
   "id": "3",
-  "title": "TESTE",
+  "title": "TESTE - Grupo 5",
   "description": "Modificação GRUPO 05 - Juliana, Larissa e Danton",
   "professor": ["Anderson Ignacio"],
   "tags": ["C#", "Blazor", "PostgreSQL"],
