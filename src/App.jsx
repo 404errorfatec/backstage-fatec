@@ -3,6 +3,8 @@ import './App.css'
 // Importamos o nosso "banco de dados" estático
 import projectsData from './data/projects.json'
 
+import Sidebar from './components/Sidebar'
+
 function App() {
   // Estado para busca (opcional, mas os alunos vão amar)
   const [search, setSearch] = useState('')
@@ -13,9 +15,12 @@ function App() {
   )
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white font-sans p-8">
-      {/* Header da Organização */}
-      <header className="max-w-6xl mx-auto mb-12 flex justify-between items-center border-b border-gray-700 pb-6">
+    <div className="min-h-screen bg-gray-900 text-white font-sans flex">
+      <Sidebar />
+      
+      <div className="flex-1 p-8 pt-20">
+        {/* Header da Organização */}
+        <header className="max-w-6xl mx-auto mb-12 flex flex-col md:flex-row justify-between items-start md:items-center border-b border-gray-700 pb-6 gap-6">
         <div>
           <h1 className="text-4xl font-black tracking-tighter text-red-500">
             error404<span className="text-white">fatec</span>
@@ -80,6 +85,7 @@ function App() {
       <footer className="max-w-6xl mx-auto mt-20 text-center text-gray-600 text-xs">
         <p>© 2026 error404fatec - Disciplina de Gestão da Produção / Programação Web</p>
       </footer>
+      </div>
     </div>
   )
 }
