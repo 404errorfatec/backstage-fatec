@@ -7,10 +7,13 @@ function App() {
   // Estado para busca (opcional, mas os alunos vão amar)
   const [search, setSearch] = useState('')
 
-  const filteredProjects = projectsData.filter(p => 
+ // ALTERAÇÃO AQUI
+  const filteredProjects = projectsData.filter(p =>
     p.title.toLowerCase().includes(search.toLowerCase()) ||
-    p.professor.toLowerCase().includes(search.toLowerCase())
+    p.professor.toLowerCase().includes(search.toLowerCase()) ||
+    p.tags.some(tag => tag.toLowerCase().includes(search.toLowerCase()))
   )
+
 
   return (
     <div className="min-h-screen bg-gray-900 text-white font-sans p-8">
