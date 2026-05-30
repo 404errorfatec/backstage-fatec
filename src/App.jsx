@@ -9,8 +9,10 @@ function App() {
 
   const filteredProjects = projectsData.filter(p =>
     p.title.toLowerCase().includes(search.toLowerCase()) ||
-    p.professor.toLowerCase().includes(search.toLowerCase())
+    p.professor.toLowerCase().includes(search.toLowerCase()) ||
+    p.tags.some(tag => tag.toLowerCase().includes(search.toLowerCase()))
   )
+
 
   return (
     <div className="min-h-screen bg-gray-900 text-white font-sans">
