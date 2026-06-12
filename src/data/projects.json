@@ -40,7 +40,7 @@
     "id": "5",
     "title": "TESTE - Grupo 5",
     "description": "Modificação GRUPO 05 - Juliana, Larissa e Danton",
-    "professor": ["Anderson Ignacio"],
+    "professor": "Anderson Ignacio",
     "tags": ["C#", "Blazor", "PostgreSQL"],
     "autores": ["Juliana Duarte", "Larissa Peres", "Danton Vitor"],
     "image": "https://cdn-wcsm.alura.com.br/2025/04/tipos-de-testes-principais-por-que-utiliza-los.jpg",
