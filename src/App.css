@@ -1,184 +1,321 @@
-.counter {
-  font-size: 16px;
-  padding: 5px 10px;
-  border-radius: 5px;
-  color: var(--accent);
-  background: var(--accent-bg);
-  border: 2px solid transparent;
-  transition: border-color 0.3s;
-  margin-bottom: 24px;
-
-  &:hover {
-    border-color: var(--accent-border);
-  }
-  &:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 2px;
-  }
+/* ===== RESET ===== */
+body {
+  margin: 0;
+  background: #111;
+  font-family: sans-serif;
+  color: white;
 }
 
-.hero {
+
+/* ===== HERO ===== */
+.hero-glitch {
+  width: 100%;
+  height: 320px;
   position: relative;
-
-  .base,
-  .framework,
-  .vite {
-    inset-inline: 0;
-    margin: 0 auto;
-  }
-
-  .base {
-    width: 170px;
-    position: relative;
-    z-index: 0;
-  }
-
-  .framework,
-  .vite {
-    position: absolute;
-  }
-
-  .framework {
-    z-index: 1;
-    top: 34px;
-    height: 28px;
-    transform: perspective(2000px) rotateZ(300deg) rotateX(44deg) rotateY(39deg)
-      scale(1.4);
-  }
-
-  .vite {
-    z-index: 0;
-    top: 107px;
-    height: 26px;
-    width: auto;
-    transform: perspective(2000px) rotateZ(300deg) rotateX(40deg) rotateY(39deg)
-      scale(0.8);
-  }
+  overflow: hidden;
 }
 
-#center {
+.hero-glitch img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: floatImage 8s ease-in-out infinite;
+}
+
+.hero-glitch::before,
+.hero-glitch::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('./assets/banner.png') center/cover no-repeat;
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+.hero-glitch::before {
+  animation: glitchTop 1s infinite;
+}
+
+.hero-glitch::after {
+  animation: glitchBottom 1s infinite;
+}
+
+
+/* ===== ANIMAÇÕES ===== */
+@keyframes floatImage {
+  0% { transform: scale(0.95) translate(0px, 0px); }
+  25% { transform: scale(0.95) translate(-5px, -5px); }
+  50% { transform: scale(0.95) translate(5px, -10px); }
+  75% { transform: scale(0.95) translate(-5px, -5px); }
+  100% { transform: scale(0.95) translate(0px, 0px); }
+}
+
+@keyframes glitchTop {
+  0% { transform: translateY(0); }
+  20% { transform: translateY(-1px); }
+  40% { transform: translateY(0px); }
+  60% { transform: translateY(-2px); }
+  80% { transform: translateY(0px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes glitchBottom {
+  0% { transform: translateY(0); }
+  20% { transform: translateY(1px); }
+  40% { transform: translateY(0px); }
+  60% { transform: translateY(3px); }
+  80% { transform: translateY(-1px); }
+  100% { transform: translateY(0); }
+}
+
+
+/* ===== HEADER SOBREPOSTO ===== */
+.header-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 28px;
   display: flex;
-  flex-direction: column;
-  gap: 25px;
-  place-content: center;
-  place-items: center;
-  flex-grow: 1;
-
-  @media (max-width: 1024px) {
-    padding: 32px 20px 24px;
-    gap: 18px;
-  }
+  align-items: center;
 }
 
-#next-steps {
+
+/* ===== AÇÕES ===== */
+.actions {
   display: flex;
-  border-top: 1px solid var(--border);
-  text-align: left;
-
-  & > div {
-    flex: 1 1 0;
-    padding: 32px;
-    @media (max-width: 1024px) {
-      padding: 24px 20px;
-    }
-  }
-
-  .icon {
-    margin-bottom: 16px;
-    width: 22px;
-    height: 22px;
-  }
-
-  @media (max-width: 1024px) {
-    flex-direction: column;
-    text-align: center;
-  }
+  align-items: center;
+  width: 100%;
 }
 
-#docs {
-  border-right: 1px solid var(--border);
-
-  @media (max-width: 1024px) {
-    border-right: none;
-    border-bottom: 1px solid var(--border);
-  }
+.actions button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
 }
 
-#next-steps ul {
+.actions input {
+  margin-left: auto;
+  width: 350px;
+  padding: 10px 14px;
+  font-size: 15px;
+  background: #3a3a3ae6;
+  border: 1px solid #775555;
+  border-radius: 12px;
+  color: rgb(255, 255, 255);
+}
+
+
+/* ===== MENU ===== */
+#menu {
+  background: rgba(0, 0, 0, 0.9);
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.menu-btn {
+  color: red;
+}
+
+#menu.active {
+  max-height: 300px;
+}
+
+#menu ul {
   list-style: none;
   padding: 0;
-  display: flex;
-  gap: 8px;
-  margin: 32px 0 0;
-
-  .logo {
-    height: 18px;
-  }
-
-  a {
-    color: var(--text-h);
-    font-size: 16px;
-    border-radius: 6px;
-    background: var(--social-bg);
-    display: flex;
-    padding: 6px 12px;
-    align-items: center;
-    gap: 8px;
-    text-decoration: none;
-    transition: box-shadow 0.3s;
-
-    &:hover {
-      box-shadow: var(--shadow);
-    }
-    .button-icon {
-      height: 18px;
-      width: 18px;
-    }
-  }
-
-  @media (max-width: 1024px) {
-    margin-top: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    li {
-      flex: 1 1 calc(50% - 8px);
-    }
-
-    a {
-      width: 100%;
-      justify-content: center;
-      box-sizing: border-box;
-    }
-  }
+  margin: 0;
 }
 
-#spacer {
-  height: 88px;
-  border-top: 1px solid var(--border);
-  @media (max-width: 1024px) {
-    height: 48px;
-  }
+#menu li {
+  border-bottom: 1px solid #623f3f;
 }
 
-.ticks {
-  position: relative;
+#menu a {
+  display: block;
+  padding: 16px;
+  color: rgb(171, 158, 158);
+  text-decoration: none;
+}
+
+#menu a:hover {
+  background: #775555;
+}
+
+
+/* ===== GRID ===== */
+.container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 32px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+
+/* ===== CARD ===== */
+.card {
+  background: #1f2937;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #374151;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  filter: drop-shadow(0px 0px 10px rgb(222, 42, 42));
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.card-image {
+  height: 180px;
+  overflow: hidden;
+}
+
+.card-image img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
-  &::before,
-  &::after {
-    content: '';
-    position: absolute;
-    top: -4.5px;
-    border: 5px solid transparent;
-  }
+.card-content {
+  padding: 16px;
+}
 
-  &::before {
-    left: 0;
-    border-left-color: var(--border);
+.tags {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.tags span {
+  font-size: 10px;
+  background: rgba(239, 68, 68, 0.2);
+  color: #f87171;
+  padding: 4px 6px;
+  border-radius: 4px;
+}
+
+
+/* ===== TEXTOS MELHORADOS ===== */
+.card-content h2 {
+  font-size: 20px;
+  margin: 10px 0;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  transition: 0.3s;
+}
+
+.card:hover .card-content h2 {
+  color: #f87171;
+  text-shadow: 0 0 8px rgba(248, 113, 113, 0.5);
+}
+
+.card-content p {
+  font-size: 14px;
+  color: #9ca3af;
+  line-height: 1.6;
+  transition: 0.3s;
+}
+
+.card:hover .card-content p {
+  color: #d1d5db;
+}
+
+.card-footer {
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.card-footer a {
+  color: #ef4444;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.card-footer a:hover {
+  color: #f87171;
+  text-shadow: 0 0 6px rgba(248, 113, 113, 0.6);
+}
+
+
+/* ===== CARD EXTRA ===== */
+.card.empty {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.6;
+  border: 2px dashed #374151;
+}
+
+
+/* ===== WELCOME (DESTAQUE) ===== */
+.welcome {
+  text-align: center;
+  padding: 70px 20px;
+}
+
+.welcome h1 {
+  font-size: 42px;
+  font-weight: 800;
+  margin-bottom: 16px;
+
+  background: linear-gradient(90deg, #e27d7d, #ef2222);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  letter-spacing: 1px;
+  text-shadow: 0 0 15px rgba(239, 68, 68, 0.3);
+
+  animation: fadeUp 1s ease;
+}
+
+.welcome p {
+  font-size: 17px;
+  color: #9ca3af;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+
+  animation: fadeUp 1.5s ease;
+}
+
+
+/* ===== ANIMAÇÃO ===== */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  &::after {
-    right: 0;
-    border-right-color: var(--border);
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
+}
+
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 40px;
+  color: #6b7280;
+  font-size: 12px;
 }
