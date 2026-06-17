@@ -1,0 +1,17 @@
+[
+  {
+    "type": "email",
+    "label": "Email",
+    "value": "contato@error404fatec.com"
+  },
+  {
+    "type": "whatsapp",
+    "label": "WhatsApp",
+    "value": "+55 (11) 99999-9999"
+  },
+  {
+    "type": "linkedin",
+    "label": "LinkedIn",
+    "value": "https://www.linkedin.com/company/error404fatec"
+  }
+]
