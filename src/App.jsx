@@ -49,10 +49,10 @@ function App() {
         {/* MENU */}
         <nav id="menu" className={menuOpen ? 'active' : ''}>
           <ul>
-            <li><a href="#">Início</a></li>
-            <li><a href="#">Projetos</a></li>
-            <li><a href="#">Professores</a></li>
-            <li><a href="#">Contato</a></li>
+            <li><a href="#" onClick={() => setMenuOpen(false)}>Início</a></li>
+            <li><a href="#" onClick={() => setMenuOpen(false)}>Projetos</a></li>
+            <li><a href="#" onClick={() => setMenuOpen(false)}>Professores</a></li>
+            <li><a href="#" onClick={() => setMenuOpen(false)}>Contato</a></li>
           </ul>
         </nav>
       </header>
