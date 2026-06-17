@@ -5,16 +5,58 @@
     "professor": "Anderson Ignacio",
     "description": "Protótipo de controle de produção industrial usando conceitos de Lean Manufacturing.",
     "tags": ["React", "Logística"],
+    "autores": ["Israel (Tech Leader)"],
     "image": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=400",
     "githubUrl": "#"
   },
   {
     "id": "2",
     "title": "Plataforma de Monitoramento de Efluentes",
-    "professor": "Dr. Silva",
+    "professor": "Anderson Ignacio",
     "description": "Dashboard para visualização de sensores IoT em tempo real para a disciplina de Engenharia.",
     "tags": ["IoT", "Node.js"],
+    "autores": ["Ryan (Tech Leader)"],
     "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=400",
     "githubUrl": "#"
+  },
+  {
+    "id": "3",
+    "title": "Componente de Card e Filtros",
+    "professor": "Anderson Ignacio",
+    "description": "Desenvolvimento do componente de card e filtros de busca por matéria ou semestre para a Engine.",
+    "tags": ["IoT", "Node.js"],
+    "autores": ["Danilo (Tech Leader)"],
+    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=400",
+    "githubUrl": "#"
+  },
+  {
+    "id": "4",
+    "title": "Padronização do JSON Global e Tipagem",
+    "professor": "Anderson Ignacio",
+    "description": "Responsável pela centralização, estruturação e padronização do JSON global e da tipagem em TypeScript.",
+    "tags": ["TypeScript", "JSON", "Padronização"],
+    "autores": ["João Paulo Mateus", "Marcio", "Otavio", "Pedro", "Victor", "Felipe"],
+    "image": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80&w=400",
+    "githubUrl": "#"
+  },
+  {
+    "id": "5",
+    "title": "Devops/QA e Configuração de Deploy",
+    "professor": "Anderson Ignacio",
+    "description": "Configuração de pipelines de deploy (Vercel/GitHub Pages) e execução de testes automatizados.",
+    "tags": ["C#", "Blazor", "PostgreSQL"],
+    "autores": ["Juliana Duarte", "Larissa Peres", "Danton Vitor"],
+    "image": "https://cdn-wcsm.alura.com.br/2025/04/tipos-de-testes-principais-por-que-utiliza-los.jpg",
+    "githubUrl": "#"
+  },
+  {
+    "id": "6",
+    "title": "Página de Detalhes do Projeto e Galeria de Mídia",
+    "professor": "Anderson Ignacio",
+    "description": "Desenvolvimento da página interna de detalhes dos projetos e implementação da galeria de mídia para os integradores.",
+    "tags": ["React", "TypeScript", "CSS"],
+    "autores": ["Leonardo (Tech Leader)", "Neilon", "João Ishida", "Atilano", "Diego"],
+    "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=400",
+    "githubUrl": "https://github.com/404errorfatec/backstage-fatec"
   }
 ]
